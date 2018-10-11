@@ -1,10 +1,18 @@
 #### 字符串操作
 
+```shell
+go get github.com/Anderson-Lu/gohelper/string
+```
+
 |所属包|方法|功能|
 |-----|-----|-----|
 |`string_helper`|`FindUrl(raw string) []string`|从指定字符串中正则匹配出来URL|
 
 #### 数值操作
+
+```shell
+go get github.com/Anderson-Lu/gohelper/number
+```
 
 |所属包|方法|功能|
 |-----|-----|-----|
@@ -18,11 +26,19 @@
 
 #### 类型转换
 
+```shell
+go get github.com/Anderson-Lu/gohelper/convert
+```
+
 |所属包|方法|功能|
 |-----|-----|-----|
 |`convert_helper`|`ConvertBs2Interface(bs []byte) (map[string]interface{}, error)`|将字节数组转化为对象|
 
 #### 定时任务
+
+```shell
+go get github.com/Anderson-Lu/gohelper/cron
+```
 
 |所属包|方法|功能|
 |-----|-----|-----|
@@ -30,17 +46,29 @@
 
 #### 并发任务
 
+```shell
+go get github.com/Anderson-Lu/gohelper/concurrent
+```
+
 |所属包|方法|功能|
 |-----|-----|-----|
 |`concurrent_helper`|`AddTask(task func(...interface{}), params ...interface{})`|添加并发任务|
 
 #### 重试任务
 
+```shell
+go get github.com/Anderson-Lu/gohelper/retry
+```
+
 |所属包|方法|功能|
 |-----|-----|-----|
 |`retry_helper`|`Retry(retryTimes int, errHandler func(error), job func() error) error`|指定重试运行指定任务|
 
 #### 数据库操作
+
+```shell
+go get github.com/Anderson-Lu/gohelper/database
+```
 
 |所属包|方法|功能|
 |-----|-----|-----|
@@ -50,11 +78,19 @@
 
 #### 中间件操作
 
+```shell
+go get github.com/Anderson-Lu/gohelper/middleware
+```
+
 |所属包|方法|功能|
 |-----|-----|-----|
 |`kafka_helper`|`NewKafkaProducer(address []string) (*KafkaProducer, error)`|生成kafka连接客户端|
 
 #### 日志操作
+
+```shell
+go get github.com/Anderson-Lu/gohelper/log
+```
 
 |所属包|方法|功能|
 |-----|-----|-----|
