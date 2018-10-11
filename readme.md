@@ -23,6 +23,8 @@ go get github.com/Anderson-Lu/gohelper/number
 |`number_helper`|`FloorOrCeil(n int, raw float64, isUp bool) float64 `|指定精度位数进行向上或者向取整|
 |`number_helper`|`CalcDigist(n float64) int`|返回精度|
 |`number_helper`|`Round(f float64, n int) float64`|指定精度位数进行向下取整|
+|`number_helper`|`CalcAverage(data Avg) float64`|计算平均数|
+|`number_helper`|`CalcVariance(data Variance) float64`|计算方差|
 
 #### 类型转换
 
