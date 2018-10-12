@@ -25,6 +25,7 @@ go get github.com/Anderson-Lu/gohelper/number
 |`number_helper`|`Round(f float64, n int) float64`|指定精度位数进行向下取整|
 |`number_helper`|`CalcAverage(data Avg) float64`|计算平均数|
 |`number_helper`|`CalcVariance(data Variance) float64`|计算方差|
+|`number_helper`|`CalcNormsdist(a float64) float64`|计算正态分布的标准密度函数|
 
 #### 类型转换
 
