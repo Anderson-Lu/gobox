@@ -101,6 +101,10 @@ go get github.com/Anderson-Lu/gohelper/log
 
 #### 加密操作
 
+```shell
+go get github.com/Anderson-Lu/gohelper/crypto
+```
+
 |所属包|方法|功能|
 |-----|-----|-----|
 |`crypto_helper`|`HmacSha256(data string, key string) string`|HMACSHA256加密算法|
