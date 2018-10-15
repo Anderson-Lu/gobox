@@ -99,5 +99,11 @@ go get github.com/Anderson-Lu/gohelper/log
 |-----|-----|-----|
 |`log_helper`|`NewLogger() *logging.Logger`|返回日志操作对象|
 
+#### 加密操作
+
+|所属包|方法|功能|
+|-----|-----|-----|
+|`crypto_helper`|`HmacSha256(data string, key string) string`|HMACSHA256加密算法|
+|`crypto_helper`|`Sha256(data string) string`|SHA256加密算法|
 
 
