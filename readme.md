@@ -11,7 +11,7 @@ go get github.com/Anderson-Lu/gohelper/string
 #### 数值操作
 
 ```shell
-go get github.com/Anderson-Lu/gohelper/number
+go get -u github.com/Anderson-Lu/gohelper/number
 ```
 
 |所属包|方法|功能|
@@ -23,8 +23,8 @@ go get github.com/Anderson-Lu/gohelper/number
 |`number_helper`|`FloorOrCeil(n int, raw float64, isUp bool) float64 `|指定精度位数进行向上或者向取整|
 |`number_helper`|`CalcDigist(n float64) int`|返回精度|
 |`number_helper`|`Round(f float64, n int) float64`|指定精度位数进行向下取整|
-|`number_helper`|`CalcAverage(data Avg) float64`|计算平均数|
-|`number_helper`|`CalcVariance(data Variance) float64`|计算方差|
+|`number_helper`|`CalcAverage(data Avg) float64`|[计算平均数](#方差和平均数)|
+|`number_helper`|`CalcVariance(data Variance) float64`|[计算方差](#方差和平均数)|
 |`number_helper`|`CalcNormsdist(a float64) float64`|计算正态分布的标准密度函数|
 
 #### 类型转换
@@ -110,4 +110,16 @@ go get github.com/Anderson-Lu/gohelper/crypto
 |`crypto_helper`|`HmacSha256(data string, key string) string`|HMACSHA256加密算法|
 |`crypto_helper`|`Sha256(data string) string`|SHA256加密算法|
 
+#### 详细说明
 
+##### 方差和平均数
+
+注意,对于计算方差和计算平均数,参数需要实现特定的接口:
+
+```golang
+type Variance interface {
+	Len() int
+	Get(i int) float64
+}
+type Avg Variance
+```
