@@ -1,3 +1,5 @@
 package app_helper
 
-type ApplicationContext struct{}
+type ApplicationContext interface {
+	Init()
+}
