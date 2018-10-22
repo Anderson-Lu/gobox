@@ -41,6 +41,14 @@ func TestInitConfigFile(t *testing.T) {
 			},
 			wantErr: false,
 		},
+		{
+			name: "测试加载yaml配置文件",
+			args: args{
+				path:   "./config_test.yaml",
+				format: CONFIG_YAML_FORMAT,
+				value:  &myconf,
+			},
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
