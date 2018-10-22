@@ -23,12 +23,10 @@ func InitConfigFile(path string, format int, value interface{}) error {
 
 	switch format {
 	case CONFIG_JSON_FORMAT:
-		json.Unmarshal(file, &value)
+		return json.Unmarshal(file, &value)
 	case CONFIG_YAML_FORMAT:
-		yaml.Unmarshal(file, &value)
+		return yaml.Unmarshal(file, &value)
 	default:
 		return fmt.Errorf("invalid format type: %d", format)
 	}
-
-	return nil
 }
