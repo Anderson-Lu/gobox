@@ -6,14 +6,14 @@ import (
 )
 
 type MyConfig struct {
-	Name   string
-	Value  string
-	Int    int
-	Double float64
+	Name   string  `yaml:"name"`
+	Value  string  `yaml:"value"`
+	Int    int     `yaml:"int"`
+	Double float64 `yaml:"double"`
 }
 
 func TestInitConfigFile(t *testing.T) {
-	var myconf MyConfig
+	var myconf = MyConfig{}
 
 	var expect = MyConfig{
 		Name:   "helloword",
@@ -25,7 +25,7 @@ func TestInitConfigFile(t *testing.T) {
 	type args struct {
 		path   string
 		format int
-		value  interface{}
+		value  MyConfig
 	}
 	tests := []struct {
 		name    string
@@ -37,7 +37,7 @@ func TestInitConfigFile(t *testing.T) {
 			args: args{
 				path:   "./config_test.json",
 				format: CONFIG_JSON_FORMAT,
-				value:  &myconf,
+				value:  myconf,
 			},
 			wantErr: false,
 		},
@@ -46,16 +46,16 @@ func TestInitConfigFile(t *testing.T) {
 			args: args{
 				path:   "./config_test.yaml",
 				format: CONFIG_YAML_FORMAT,
-				value:  &myconf,
+				value:  myconf,
 			},
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if err := InitConfigFile(tt.args.path, tt.args.format, tt.args.value); (err != nil) != tt.wantErr {
+			if err := InitConfigFile(tt.args.path, tt.args.format, &tt.args.value); (err != nil) != tt.wantErr {
 				t.Errorf("InitConfigFile() error = %v, wantErr %v", err, tt.wantErr)
 			}
-			if !reflect.DeepEqual(tt.args.value, &expect) {
+			if !reflect.DeepEqual(tt.args.value, expect) {
 				t.Errorf("InitConfigFile() error =%v, want = %v", tt.args.value, expect)
 			}
 		})

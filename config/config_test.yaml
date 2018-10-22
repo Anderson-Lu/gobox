@@ -1,4 +1,6 @@
-Name: helloword
-Value: i am value
-Int: 1
-Double: 1.11
+name: helloword
+value: "i am value"
+int: 1
+double: 1.11
+
+
