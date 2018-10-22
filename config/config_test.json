@@ -2,5 +2,8 @@
     "Name":"helloword",
     "Value":"i am value",
     "Int":1,
-    "Double":1.11
+    "Double":1.11,
+    "T": {
+        "Name":"t"
+    }
 }

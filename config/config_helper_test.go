@@ -10,6 +10,11 @@ type MyConfig struct {
 	Value  string  `yaml:"value"`
 	Int    int     `yaml:"int"`
 	Double float64 `yaml:"double"`
+	T      T       `yaml:"t"`
+}
+
+type T struct {
+	Name string `yaml:"tname"`
 }
 
 func TestInitConfigFile(t *testing.T) {
@@ -20,6 +25,9 @@ func TestInitConfigFile(t *testing.T) {
 		Value:  "i am value",
 		Int:    1,
 		Double: 1.11,
+		T: T{
+			Name: "t",
+		},
 	}
 
 	type args struct {
