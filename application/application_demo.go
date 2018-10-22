@@ -1,5 +1,7 @@
 package app_helper
 
+import "fmt"
+
 type fContext struct {
 }
 
@@ -15,6 +17,7 @@ func (self fContext) MyOwnMethod() {
 func demo() {
 	context := fContext{}
 	context.Init()
+	fmt.Println("地址",&context)
 	app := NewApplication()
 	app.SetContext(context)
 	app.SetOnStart(onStart)
@@ -27,7 +30,7 @@ func onStart(c ApplicationContext) {
 }
 
 func onStop(c ApplicationContext) {
-	c.(fContext).MyOwnMethod()
+	fmt.Println("地址",&c)
 }
 
 func run(c ApplicationContext) {

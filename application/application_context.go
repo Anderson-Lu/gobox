@@ -1,5 +1,3 @@
 package app_helper
 
-type ApplicationContext interface {
-	Init()
-}
+type ApplicationContext interface{}
