@@ -1,7 +1,6 @@
 package config_helper
 
 import (
-	"reflect"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
@@ -27,7 +26,6 @@ func InitConfigFile(path string, format int, value interface{}) error {
 		return json.Unmarshal(file, &value)
 	case CONFIG_YAML_FORMAT:
 		e := yaml.Unmarshal(file, value)
-		fmt.Println(e, value,reflect.TypeOf(value))
 		return e
 	default:
 		return fmt.Errorf("invalid format type: %d", format)
