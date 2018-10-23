@@ -2,6 +2,7 @@ package number_helper
 
 import (
 	"fmt"
+	"math"
 	"testing"
 )
 
@@ -28,6 +29,12 @@ func TestCalcDigist(t *testing.T) {
 				t.Errorf("CalcDigist() = %v, want %v", got, tt.want)
 			}
 		})
+	}
+}
+
+func TestLn(t *testing.T) {
+	if math.Abs(Ln(10)-2.302585) > 0.000001 {
+		t.Errorf("clac error,result=%f,want=%f", Ln(10), 2.302585)
 	}
 }
 
