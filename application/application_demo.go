@@ -19,7 +19,7 @@ func demo() {
 	context.Init()
 	fmt.Println("地址", &context)
 	app := NewApplication()
-	app.SetContext(context)
+	app.SetContext(&context)
 	app.SetOnStart(onStart)
 	app.SetOnStop(onStop)
 	app.Run(run)
