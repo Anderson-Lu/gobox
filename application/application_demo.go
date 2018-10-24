@@ -17,7 +17,7 @@ func (self fContext) MyOwnMethod() {
 func demo() {
 	context := fContext{}
 	context.Init()
-	fmt.Println("地址",&context)
+	fmt.Println("地址", &context)
 	app := NewApplication()
 	app.SetContext(context)
 	app.SetOnStart(onStart)
@@ -25,14 +25,14 @@ func demo() {
 	app.Run(run)
 }
 
-func onStart(c ApplicationContext) {
+func onStart(c *ApplicationContext) {
 
 }
 
-func onStop(c ApplicationContext) {
-	fmt.Println("地址",&c)
+func onStop(c *ApplicationContext) {
+	fmt.Println("地址", &c)
 }
 
-func run(c ApplicationContext) {
+func run(c *ApplicationContext) {
 
 }
