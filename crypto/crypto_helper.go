@@ -2,7 +2,9 @@ package crypto_helper
 
 import (
 	"crypto/hmac"
+	"crypto/md5"
 	"crypto/sha256"
+	"encoding/hex"
 	"fmt"
 	"io"
 )
@@ -19,4 +21,12 @@ func Sha256(data string) string {
 	h := sha256.New()
 	h.Write([]byte(data))
 	return fmt.Sprintf("%x", h.Sum(nil))
+}
+
+//Md5加密
+func GetMD5Hex(content string) string {
+	h := md5.New()
+	h.Write([]byte(content))
+	hexstr := hex.EncodeToString(h.Sum(nil))
+	return hexstr
 }
