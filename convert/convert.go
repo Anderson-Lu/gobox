@@ -1,4 +1,4 @@
-package convert_helper
+package convert
 
 import "encoding/json"
 

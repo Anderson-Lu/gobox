@@ -1,4 +1,4 @@
-package kafka_helper
+package kafka
 
 import (
 	"encoding/json"

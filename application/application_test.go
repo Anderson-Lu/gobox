@@ -1,4 +1,4 @@
-package app_helper
+package application
 
 import (
 	"testing"

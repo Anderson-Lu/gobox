@@ -1,4 +1,4 @@
-package number_helper
+package number
 
 //计算一阶差分
 func CalcFeasibleRegion(x []float64) []float64 {

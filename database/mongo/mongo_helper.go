@@ -1,14 +1,14 @@
-package mongo_helper 
+package mongo
 
 import (
 	mgo "gopkg.in/mgo.v2"
 )
 
 //connStr like mongodb://username:password@host:port/database
-func  NewMongoClient(connStr string) (*mgo.Session,error) {
-	session ,err := mgo.Dial(connStr)
-	if err!= nil {
+func NewMongoClient(connStr string) (*mgo.Session, error) {
+	session, err := mgo.Dial(connStr)
+	if err != nil {
 		session.SetMode(mgo.Monotonic, true)
 	}
-	return session,err
+	return session, err
 }

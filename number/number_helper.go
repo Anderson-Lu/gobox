@@ -1,4 +1,4 @@
-package number_helper
+package number
 
 import (
 	"math"

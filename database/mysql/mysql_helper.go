@@ -1,4 +1,4 @@
-package mysql_helper
+package mysql
 
 import (
 	"fmt"

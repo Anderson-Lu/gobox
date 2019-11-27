@@ -1,4 +1,4 @@
-package redis_helper
+package redis
 
 import (
 	"time"
@@ -28,6 +28,6 @@ func (r *RedisClient) Get(key string) (string, error) {
 	return strCmd.Val(), strCmd.Err()
 }
 
-func (r *RedisClient) Set(key string, value string,duration time.Duration) {
-	r.client.Set(key, value,duration)
+func (r *RedisClient) Set(key string, value string, duration time.Duration) {
+	r.client.Set(key, value, duration)
 }

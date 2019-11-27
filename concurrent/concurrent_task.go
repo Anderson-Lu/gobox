@@ -1,4 +1,4 @@
-package concurrent_helper
+package concurrent
 
 import (
 	"sync"

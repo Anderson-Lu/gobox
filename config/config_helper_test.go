@@ -1,4 +1,4 @@
-package config_helper
+package config
 
 import (
 	"reflect"

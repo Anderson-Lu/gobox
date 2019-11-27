@@ -1,4 +1,4 @@
-package cron_helper
+package cron
 
 import "github.com/robfig/cron"
 
@@ -14,7 +14,7 @@ func init() {
 	}
 }
 
-func (self *JobSchduler) AddJob(job func(), errHandler func(error), taskName string, cronTab string) {
+func (self *JobSchduler) AddAndStartJob(job func(), errHandler func(error), taskName string, cronTab string) {
 	go func() {
 		c := cron.New()
 		c.AddFunc(cronTab, func() {

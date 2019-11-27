@@ -1,4 +1,4 @@
-package crypto_helper
+package crypto
 
 import (
 	"crypto/hmac"

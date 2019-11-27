@@ -1,3 +1,3 @@
-package app_helper
+package application
 
 type ApplicationContext interface{}

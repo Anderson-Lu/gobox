@@ -1,11 +1,11 @@
-package config_helper
+package config
 
 import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
 
-	"gopkg.in/yaml.v2"
+	yaml "gopkg.in/yaml.v2"
 )
 
 const (

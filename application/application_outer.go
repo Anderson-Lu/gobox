@@ -1,4 +1,4 @@
-package app_helper
+package application
 
 func NewApplication() *Application {
 	return &Application{}

@@ -1,4 +1,4 @@
-package retry_helper
+package retry
 
 import "fmt"
 
